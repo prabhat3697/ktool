@@ -1,0 +1,17 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ktool"
+version = "0.1.0"
+description = "Kubectl shortcuts + search + summaries"
+requires-python = ">=3.10"
+dependencies = ["typer>=0.12.0", "rich>=13.7.0", "pyyaml>=6.0.1"]
+
+[project.scripts]
+k = "ktool.cli:main_wrapper"
+kctx = "ktool.cli:ctx_app"
+
+[tool.setuptools.packages.find]
+where = ["."]
